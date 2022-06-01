@@ -1,4 +1,4 @@
-// @jsx createElement
+/** @jsx createElement */
 import { serve } from "https://deno.land/std@0.119.0/http/server.ts";
 import { bundle } from "https://deno.land/x/emit/mod.ts";
 import { ReactDomServer, React, StaticRouter, createElement } from "./dep.ts";
