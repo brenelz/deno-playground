@@ -1,20 +1,10 @@
 /** @jsx createElement */
 import { serve } from "https://deno.land/std@0.119.0/http/server.ts";
-import { bundle } from "https://deno.land/x/emit/mod.ts";
 import { ReactDomServer, React, StaticRouter, createElement } from "./dep.ts";
 import App from "./src/app.tsx";
 
 async function handler(req: Request) {
   const { pathname } = new URL(req.url);
-
-  if (pathname.startsWith("/app.js")) {
-    const { code } = await bundle("./client.tsx", { cacheRoot: "./src" });
-    return new Response(code, {
-      headers: {
-        "content-type": "text/javascript",
-      },
-    });
-  }
 
   try {
     const file = await Deno.readFile(`./public/${pathname}`);
