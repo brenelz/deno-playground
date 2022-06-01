@@ -1,6 +1,7 @@
+// @jsx createElement
 import { serve } from "https://deno.land/std@0.119.0/http/server.ts";
 import { bundle } from "https://deno.land/x/emit/mod.ts";
-import { ReactDomServer, React, StaticRouter } from "./dep.ts";
+import { ReactDomServer, React, StaticRouter, createElement } from "./dep.ts";
 import App from "./src/app.tsx";
 
 async function handler(req: Request) {

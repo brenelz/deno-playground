@@ -1,5 +1,5 @@
 import * as ReactDomServer from "https://esm.sh/react-dom@18.1.0/server";
-import React from "https://esm.sh/react@18.1.0";
+import React, { createElement } from "https://esm.sh/react@18.1.0";
 import ReactDOM from "https://esm.sh/react-dom@18.1.0";
 import {
   BrowserRouter,
@@ -16,4 +16,5 @@ export {
   Routes,
   Route,
   StaticRouter,
+  createElement,
 };
