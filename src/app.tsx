@@ -1,11 +1,24 @@
 /** @jsx createElement */
-import { React, createElement } from "../dep.ts";
+import { React, createElement, Routes, Route } from "../dep.ts";
+import Index from "./index.tsx";
+import Test from "./test.tsx";
 
 export default function App() {
   return (
-    <div>
-      <h1>My Application</h1>
-      <button onClick={() => alert("clicked")}>Click me!</button>
-    </div>
+    <html>
+      <head>
+        <title>My Application</title>
+        <link rel="stylesheet" href="test.css" />
+      </head>
+      <body>
+        <div id="root">
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/test" element={<Test />} />
+          </Routes>
+        </div>
+        <script src="app.js" defer></script>
+      </body>
+    </html>
   );
 }

@@ -5,6 +5,7 @@ import {
   BrowserRouter,
   Routes,
   Route,
+  Link,
 } from "https://esm.sh/react-router-dom@6";
 import { StaticRouter } from "https://esm.sh/react-router-dom@6/server";
 
@@ -15,6 +16,7 @@ export {
   BrowserRouter,
   Routes,
   Route,
+  Link,
   StaticRouter,
   createElement,
 };

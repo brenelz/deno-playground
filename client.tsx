@@ -1,6 +1,11 @@
-import { React, ReactDOM } from "./dep.ts";
+import { React, ReactDOM, BrowserRouter } from "./dep.ts";
 
 import App from "./src/app.tsx";
 
-// @ts-expect-error document only available in browser
-ReactDOM.hydrate(<App />, document.getElementById("root"));
+ReactDOM.hydrate(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  // @ts-expect-error document only available in browser
+  document.getElementById("root")
+);

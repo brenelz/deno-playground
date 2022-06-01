@@ -25,20 +25,9 @@ async function handler(req: Request) {
 
   return new Response(
     ReactDomServer.renderToString(
-      <html>
-        <head>
-          <title>My Application</title>
-          <link rel="stylesheet" href="test.css" />
-        </head>
-        <body>
-          <div id="root">
-            <StaticRouter location={req.url}>
-              <App />
-            </StaticRouter>
-          </div>
-          <script src="app.js" defer></script>
-        </body>
-      </html>
+      <StaticRouter location={req.url}>
+        <App />
+      </StaticRouter>
     ),
     {
       headers: {
