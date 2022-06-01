@@ -1,4 +1,5 @@
-import { React } from "../dep.ts";
+/** @jsx createElement */
+import { React, createElement } from "../dep.ts";
 
 export default function App() {
   return (
