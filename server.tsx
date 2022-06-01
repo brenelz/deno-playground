@@ -8,7 +8,7 @@ async function handler(req: Request) {
   const { pathname } = new URL(req.url);
 
   if (pathname.startsWith("/app.js")) {
-    const { code } = await bundle("./client.tsx");
+    const { code } = await bundle("./client.tsx", { cacheRoot: "./src" });
     return new Response(code, {
       headers: {
         "content-type": "text/javascript",
